@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const requiredEnvVars = [
     'PORT',
     'MONGODB_URI'
@@ -15,10 +13,7 @@ const validateEnvVars = () => {
 
     console.log('All required environment variables are set.');
     
-    return {
-        PORT: process.env.PORT,
-        MONGODB_URI: process.env.MONGODB_URI
-    };
 };
 
-module.exports = validateEnvVars();
+// export the function reference so consumers can call it
+module.exports = validateEnvVars;
